@@ -154,7 +154,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, breakable, enhanced, interior hidden, sharp corners, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, enhanced, interior hidden, breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Contents}
 {
@@ -182,7 +182,8 @@ tutorial}\label{sources-reviewed-in-this-tutorial}}
 \section{Downloading the data}\label{downloading-the-data}}
 
 \hypertarget{attribution}{%
-\section{Attribution}\label{attribution}}
+\section*{Attribution}\label{attribution}}
+\addcontentsline{toc}{section}{Attribution}
 
 Open Geospatial Data by Felipe Valdez is licensed under CC BY-NC-SA 4.0
 
