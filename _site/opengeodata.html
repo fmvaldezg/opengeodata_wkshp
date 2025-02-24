@@ -91,11 +91,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#exploring-the-data" id="toc-exploring-the-data" class="nav-link" data-scroll-target="#exploring-the-data"><span class="header-section-number">3</span> Exploring the data</a>
   <ul class="collapse">
   <li><a href="#in-openstreetmap" id="toc-in-openstreetmap" class="nav-link" data-scroll-target="#in-openstreetmap"><span class="header-section-number">3.1</span> In OpenStreetMap</a></li>
-  <li><a href="#in-overture-maps" id="toc-in-overture-maps" class="nav-link" data-scroll-target="#in-overture-maps"><span class="header-section-number">3.2</span> In Overture Maps</a></li>
-  <li><a href="#in-qgis" id="toc-in-qgis" class="nav-link" data-scroll-target="#in-qgis"><span class="header-section-number">3.3</span> In QGIS</a></li>
   </ul></li>
-  <li><a href="#downloading-the-data" id="toc-downloading-the-data" class="nav-link" data-scroll-target="#downloading-the-data"><span class="header-section-number">4</span> Downloading the data</a></li>
-  
   </ul>
 </nav>
     </div>
@@ -178,7 +174,54 @@ ul.task-list li input[type="checkbox"] {
 <section id="exploring-the-data" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="exploring-the-data"><span class="header-section-number">3</span> Exploring the data</h2>
 <section id="in-openstreetmap" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored" data-anchor-id="in-openstreetmap"><span class="header-section-number">3.1</span> In OpenStreetMap</h3>
+<h3 data-number="3.1" class="anchored"><span class="header-section-number">3.1</span> In OpenStreetMap</h3>
+<p><span class="badge rounded-pill bg-primary">01</span> <em>Go to <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> on your web browser</em></p>
+<p><img src="./images/osm_tools.png" class="img-fluid"></p>
+<p>The screen will show a big area with a map on the center. To explore the map you can use the <code>Search</code> bar located on the top left corner. Simply type the name of a place or a street address and click <code>enter/return</code> or the search icon. You can also use the <code>Navigation controls</code> (zoom in +/zoom out -/show my location) located on the top right corner of the map.</p>
+<p><span class="badge rounded-pill bg-primary">02</span> <em>Type the name of a place in the search bar.</em></p>
+<p>When you type the name of a place in the <code>Search</code> bar, OSM will show you a list of options found in <code>Nominatim</code>.</p>
+<div class="alert alert-dismissible alert-primary">
+<p><strong></strong> <a href="https://nominatim.org/" class="alert-link">Nominatim</a> is an open-source geocoding software used to find addresses and places in OSM.</p>
+</div>
+<p>Here we typed <code>Philadelphia</code> and we get six main results: the city of Philadelphia, Pennsylvania, the county with the same name, a town named Philadelphia in Mississippi and three other villages named like that in other states. Notice the map has zoomed in to the city of Philadelphia, PA. The results you get are based on the current view of your map. If you want to see more results you can click on the button <code>More results</code>.</p>
+<p><img src="./images/search_osm.png" class="img-fluid"></p>
+<p><span class="badge rounded-pill bg-primary">03</span> <em>Click on the result you want to explore.</em></p>
+<p>When you click on a result, the left panel will show the selected element info and tags. On the map, you would see the element highlighted in orange.</p>
+<p><img src="./images/element1.png" class="img-fluid"></p>
+<p>In this example we see an area highlighted in orange that corresponds to the city of Philadelphia along with a node in the center of this area. On the left side panel we see a list with all the tags assigned to this element. For example: <code>border_type:city</code>, <code>boundary:administrative</code>, and <code>loc_name:Philly</code>.</p>
+<div class="alert alert-dismissible alert-primary">
+<strong>How data is organized in OSM?</strong><br><br>
+<p>
+All data in OSM is represented by an <strong>element</strong>.<br><br>An <strong>element</strong> can be either a <strong>node</strong> (point)<img src="https://wiki.openstreetmap.org/w/images/7/76/Osm_element_node.svg" style="width: 3%; height: auto;">, a <strong>way</strong> (line) <img src="https://wiki.openstreetmap.org/w/images/e/ee/Osm_element_way.svg" style="width: 3%; height: auto;">or a <strong>relation</strong> (group of elements)<img src="https://wiki.openstreetmap.org/w/images/4/48/Osm_element_relation.svg" style="width: 3%; height: auto;">.<br><br>Each element is described using <strong>tags</strong> which are the combination of a <strong>key</strong> and a <strong>value</strong> <img src="https://wiki.openstreetmap.org/w/images/0/0d/Mf_tag.svg" style="width: 30px; height: 30px; background-color: white; padding: 0px;">. For example a coffee shop os represented by an element of type <strong>node</strong> with tags <strong>‘amenity’=‘cafe’</strong>
+</p>
+<p>
+Learn more about elements and tags <a href="https://wiki.openstreetmap.org/wiki/Elements">here</a>.
+</p></div>
+<section id="querying-the-data" class="level4" data-number="3.1.1">
+<h4 data-number="3.1.1" class="anchored" data-anchor-id="querying-the-data"><span class="header-section-number">3.1.1</span> Querying the data</h4>
+<p>Now lets query the data we see on the map to discover the type of element and what tags are being used to describe it.</p>
+<p><span class="badge rounded-pill bg-primary">04</span> <em>Type the name of a place in the search bar.</em></p>
+<p>We are going to explore a more local area by typing <code>charles library, philadelphia</code> in the search bar. This will zoom in the map further.</p>
+<p><img src="./images/charlesosm.png" class="img-fluid"></p>
+<p><span class="badge rounded-pill bg-primary">05</span> <em>Click on the ‘Query features’ tool.</em></p>
+<p>On the right side of the screen, click on the <code>Query features</code> tool <img src="./images/queryosm.png" class="img-fluid"></p>
+<p>You will notice the mouse cursor icon will change to a question mark.</p>
+<p><span class="badge rounded-pill bg-primary">06</span> <em>Click on any element you see on the map to query.</em></p>
+<p>Now, if you click on any area of the map, the left side panel will show two lists: ‘Nearby features’ and ‘Enclosing features’. The Nearby feaures list will have all elements close to the point you clicked on the map. In this example, we got seven results.</p>
+<p><img src="./images/queryosm1.png" class="img-fluid"></p>
+<p><span class="badge rounded-pill bg-primary">07</span> <em>Explore the results.</em></p>
+<p>If you click on any of the results, the left side panel will show the element details and tags. In this example, we clicked on ‘Saxbys’, which is a coffee shop by Charles Library.</p>
+<p>As you can see, this element has five tags that describe it including its name, opening hours, and wheelchair accessibility. An element can have unlimited number of tags, however, some of them might be auto-exclusive. See more details on OSM tagging system here.</p>
+<p><img src="./images/queryosm2.png" class="img-fluid"></p>
+<div class="alert alert-dismissible alert-warning">
+<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+<h4 class="alert-heading anchored">
+Warning!
+</h4>
+<p class="mb-0">
+To add or modify tags and elements on the map you need to sign up for an OSM account <a href="https://www.openstreetmap.org/user/new" class="alert-link">here</a>.
+</p>
+</div>
 </section>
 <section id="in-overture-maps" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="in-overture-maps"><span class="header-section-number">3.2</span> In Overture Maps</h3>
@@ -186,20 +229,22 @@ ul.task-list li input[type="checkbox"] {
 <section id="in-qgis" class="level3" data-number="3.3">
 <h3 data-number="3.3" class="anchored" data-anchor-id="in-qgis"><span class="header-section-number">3.3</span> In QGIS</h3>
 </section>
-</section>
 <section id="downloading-the-data" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="downloading-the-data"><span class="header-section-number">4</span> Downloading the data</h2>
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="attribution" class="level2 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Attribution</h2><div class="quarto-appendix-contents">
+</section></section><div id="quarto-appendix" class="default"><section id="attribution" class="level2 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Attribution</h2><div class="quarto-appendix-contents">
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
 <a property="dct:title" rel="cc:attributionURL" href="http://felipevaldez.com/kobotoolbox_tutorial/">Open Geospatial Data</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://felipevaldez.com/">Felipe Valdez</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a>
 </p>
 
 
-</div></section></div></main> <!-- /main -->
+</div></section></div></main></div>
+
+
+
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -620,7 +665,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+ <!-- /content -->
 
 
 
