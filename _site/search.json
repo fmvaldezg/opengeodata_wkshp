@@ -1,29 +1,43 @@
 [
   {
+    "objectID": "opengeodata.html",
+    "href": "opengeodata.html",
+    "title": "Using Open Geospatial Data in GIS",
+    "section": "",
+    "text": "In the world of data, open means different things. First, it’s about who can access and use the data. Second, it’s about how that data can be used - from the transparency of its creation and handling to the standards and protocols that make the data accessible.\nThanks to advances in computing and the internet, many organizations now embrace open data policies to share, access, and create value from data.\nHaving an open data policy offers several key benefits:\n\nGreater transparency, especially for governments. When data is open, citizens can see and understand what their government is doing.\nIncreased public participation. Open data allows citizens to engage with and contribute to solutions for their communities.\nFaster and more significant advances in knowledge. Instead of spending time and money generating new data, researchers can build on existing information.\nBetter reproducibility of research results. Other scientists can verify and build upon previous work.\nImproved informed decision-making, particularly for global-scale problems. When decision-makers have access to good data, they make better choices.\n\nOpen geospatial data is especially crucial for tackling global challenges like climate change, urban development, and disaster response. In these situations, quick access to accurate location-based information can make the difference in coordinating effective responses and making smart decisions."
+  },
+  {
+    "objectID": "opengeodata.html#why-open-geospatial-data",
+    "href": "opengeodata.html#why-open-geospatial-data",
+    "title": "Using Open Geospatial Data in GIS",
+    "section": "",
+    "text": "In the world of data, open means different things. First, it’s about who can access and use the data. Second, it’s about how that data can be used - from the transparency of its creation and handling to the standards and protocols that make the data accessible.\nThanks to advances in computing and the internet, many organizations now embrace open data policies to share, access, and create value from data.\nHaving an open data policy offers several key benefits:\n\nGreater transparency, especially for governments. When data is open, citizens can see and understand what their government is doing.\nIncreased public participation. Open data allows citizens to engage with and contribute to solutions for their communities.\nFaster and more significant advances in knowledge. Instead of spending time and money generating new data, researchers can build on existing information.\nBetter reproducibility of research results. Other scientists can verify and build upon previous work.\nImproved informed decision-making, particularly for global-scale problems. When decision-makers have access to good data, they make better choices.\n\nOpen geospatial data is especially crucial for tackling global challenges like climate change, urban development, and disaster response. In these situations, quick access to accurate location-based information can make the difference in coordinating effective responses and making smart decisions."
+  },
+  {
     "objectID": "opengeodata.html#sources-reviewed-in-this-tutorial",
     "href": "opengeodata.html#sources-reviewed-in-this-tutorial",
-    "title": "OpenGeoData",
+    "title": "Using Open Geospatial Data in GIS",
     "section": "2 Sources reviewed in this tutorial",
-    "text": "2 Sources reviewed in this tutorial\n\n2.1 OpenStreetMap OSM\n\n\n2.2 Overture Maps"
+    "text": "2 Sources reviewed in this tutorial\nIn this guide, we’ll explore ways to access and use open geospatial data, focusing on OpenStreetMap and Overture Maps for Geographic Information Systems (QGIS specifically). These tools are powerful resources that anyone can use to work with location-based data.\n\n2.1 OpenStreetMap OSM\n\nOpenStreetMap (OSM) is a collaborative world map that anyone can edit and use - think of it like “Wikipedia for maps.” It is created by volunteers worldwide who add and update geographic information about roads, buildings, parks, businesses, and other features. People contribute data based on their local knowledge, GPS tracks, aerial imagery, and field surveys.\nKey aspects of OSM:\n\nCommunity-driven: The data is collected and maintained by a global community of mappers, from hobbyists to professional geographers.\nTruly open: Unlike commercial maps, OSM data is freely available for anyone to download, use, and modify under an open license (Open Database License).\nUsed everywhere: The data powers thousands of applications and services - from humanitarian crisis response to navigation apps, urban planning tools, and games.\nConstantly updated: Because anyone can contribute, OSM often has more up-to-date information than commercial maps, especially in rapidly changing areas or after natural disasters.\n\nThese are only some of the communities building OSM. Explore more communities here\n\nThe project started in 2004 in the UK and has grown into one of the largest collaborative mapping efforts in the world. Today, OSM is often considered the most comprehensive free source of geographic data available.\nAlthough you don’t need an account to explore the map, you can sign up if you want to contribute edits or be part of the communities related to the project.\n\n\n\n2.2 Overture Maps\n\nOverture Maps is a newer collaborative effort launched in 2022 by major tech companies including Meta, Microsoft, Amazon (AWS), and TomTom. It combines information from multiple sources - including commercial datasets, open data, and machine learning - to create a high-quality, standardized global map.\nKey aspects of Overture Maps:\n\nQuality-focused: It uses sophisticated data validation and conflation techniques to ensure accuracy and consistency of geographic information.\nBusiness-friendly: While free and open like OSM, it’s specifically designed to meet enterprise-level mapping needs with reliable, standardized data.\nModern architecture: Built from the ground up to handle today’s mapping challenges, with a focus on regular updates and clear data lineage.\nMultiple sources: Instead of relying solely on volunteer contributions, it combines different data sources including commercial data, open data, and machine-derived features.\n\nThe project released its first major dataset in 2023 and aims to provide an alternative foundation for building mapping applications and services. While newer than OSM, it’s designed to complement rather than compete with existing open mapping projects."
   },
   {
     "objectID": "opengeodata.html#exploring-the-data",
     "href": "opengeodata.html#exploring-the-data",
-    "title": "OpenGeoData",
+    "title": "Using Open Geospatial Data in GIS",
     "section": "3 Exploring the data",
-    "text": "3 Exploring the data"
+    "text": "3 Exploring the data\n\n3.1 In OpenStreetMap\n\n\n3.2 In Overture Maps\n\n\n3.3 In QGIS"
   },
   {
     "objectID": "opengeodata.html#downloading-the-data",
     "href": "opengeodata.html#downloading-the-data",
-    "title": "OpenGeoData",
+    "title": "Using Open Geospatial Data in GIS",
     "section": "4 Downloading the data",
     "text": "4 Downloading the data"
   },
   {
     "objectID": "opengeodata.html#attribution",
     "href": "opengeodata.html#attribution",
-    "title": "OpenGeoData",
+    "title": "Using Open Geospatial Data in GIS",
     "section": "Attribution",
     "text": "Attribution\n\n\nOpen Geospatial Data by Felipe Valdez is licensed under CC BY-NC-SA 4.0"
   }
