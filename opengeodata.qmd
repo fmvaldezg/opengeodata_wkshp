@@ -5,10 +5,10 @@ author:
   url: mailto:felipe.valdez@temple.edu
 toc: true
 toc-title: Contents
+toc-depth: 4
 number-sections: true
 format:
-  html: 
-    theme: cosmo
+  html: default
   #pdf: default
 ---
 
@@ -98,9 +98,9 @@ You can also use the `Navigation controls` (zoom in +/zoom out -/show my locatio
 
 When you type the name of a place in the `Search` bar, OSM will show you a list of options found in `Nominatim`. 
 
-<div class="alert alert-dismissible alert-primary">
-  <strong></strong> <a href="https://nominatim.org/" class="alert-link">Nominatim</a> is an open-source geocoding software used to find addresses and places in OSM.
-</div>
+::: {.callout-note}
+[**Nominatim**](https://nominatim.org/) is an open-source geocoding software used to find addresses and places in OSM.
+:::
 
 Here we typed `Philadelphia` and we get six main results: the city of Philadelphia, Pennsylvania, the county with the same name, a town named Philadelphia in Mississippi and three other villages named like that in other states. Notice the map has zoomed in to the city of Philadelphia, PA. The results you get are based on the current view of your map. If you want to see more results you can click on the button `More results`.
 
@@ -109,17 +109,24 @@ Here we typed `Philadelphia` and we get six main results: the city of Philadelph
 <span class="badge rounded-pill bg-primary">03</span> *Click on the result you want to explore.*
 
 When you click on a result, the left panel will show the selected element info and tags. 
-On the map, you would see the element highlighted in orange. 
+On the map, you would see the element highlighted in orange.
 
 ![](./images/element1.png)
 
 In this example we see an area highlighted in orange that corresponds to the city of Philadelphia along with a node in the center of this area.
 On the left side panel we see a list with all the tags assigned to this element. For example: `border_type:city`, `boundary:administrative`, and `loc_name:Philly`.
 
+::: {.callout-caution collapse="true"}
+## How data is organized in OSM?
+All data in OSM is represented by an **element.**
 
-<div class="alert alert-dismissible alert-primary">
-  <strong>How data is organized in OSM?</strong><br></br><p>All data in OSM is represented by an <strong>element</strong>.<br></br>An <strong>element</strong> can be either a <strong>node</strong> (point)<img src="https://wiki.openstreetmap.org/w/images/7/76/Osm_element_node.svg" style="width: 3%; height: auto;">, a <strong>way</strong> (line) <img src="https://wiki.openstreetmap.org/w/images/e/ee/Osm_element_way.svg" style="width: 3%; height: auto;">or a <strong>relation</strong> (group of elements)<img src="https://wiki.openstreetmap.org/w/images/4/48/Osm_element_relation.svg" style="width: 3%; height: auto;">.<br></br>Each element is described using <strong>tags</strong> which are the combination of a <strong>key</strong> and a <strong>value</strong> <img src="https://wiki.openstreetmap.org/w/images/0/0d/Mf_tag.svg" style="width: 30px; height: 30px; background-color: white; padding: 0px;">. For example a coffee shop os represented by an element of type <strong>node</strong> with tags <strong>'amenity'='cafe'</strong></p><p>Learn more about elements and tags <a href='https://wiki.openstreetmap.org/wiki/Elements'>here</a>.
-</div>
+An **element** can be either a `node` ![](https://wiki.openstreetmap.org/w/images/7/76/Osm_element_node.svg){width="3%" height="auto"}, a `way` ![](https://wiki.openstreetmap.org/w/images/e/ee/Osm_element_way.svg){width="3%" height="auto"} or a `relation` ![](https://wiki.openstreetmap.org/w/images/4/48/Osm_element_relation.svg){width="3%" height="auto"}.
+
+Each element is described using `tags` which are the combination of a `key` and a `value` ![](https://wiki.openstreetmap.org/w/images/0/0d/Mf_tag.svg){width="30px" height="30px" style="background-color: white; padding: 0px"}.
+For example, a coffee shop is represented by an element type `node` with tags `amenity=cafe`.
+
+Learn more about elements and tags [here.](https://wiki.openstreetmap.org/wiki/Elements)
+:::
 
 #### Querying the data
 
@@ -154,20 +161,88 @@ As you can see, this element has five tags that describe it including its name, 
 
 ![](./images/queryosm2.png)
 
-<div class="alert alert-dismissible alert-warning">
-  <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-  <h4 class="alert-heading">Warning!</h4>
-  <p class="mb-0">To add or modify tags and elements on the map you need to sign up for an OSM account <a href="https://www.openstreetmap.org/user/new" class="alert-link">here</a>.</p>
-</div>
+::: {.callout-warning}
+## Warning!
+To add or modify tags and elements on the map you need to sign up for an OSM account [here.](https://www.openstreetmap.org/user/new)
+:::
 
 ### In Overture Maps
 
+<span class="badge rounded-pill bg-primary">01</span> *Go to [https://explore.overturemaps.org/](https://explore.overturemaps.org/#15/38.90678/-77.03649) on your web browser*
+
+![](./images/overture_tools.png)
+
+<span class="badge rounded-pill bg-primary">02</span> *Find your location on the map*
+
+Unlike OSM, the Overture Maps explorer does not have a search bar. The best way to find a location is either clicking on the 'Find my location' button ![](./images/overture_loc.png) or using the navigation controls (zoom in and zoom out).
+
+::: {.callout-caution collapse="true"}
+## Allow access to your location
+
+The first time you use the 'Find my location' tool, you will be asked to allow the browser access. If you are ok with this, simply click on 'Allow this time'.
+
+![](./images/overture_allow.png){fig-align="center"}
+:::
+
+![](./images/overture_charles.png)
+
+<span class="badge rounded-pill bg-primary">03</span> *Click on any of the features you see on the map*
+
+When you click on any feature on the map, a popup window will display the feature(s) you clicked on, the bounding features (those that contain the clicked feature, like the city, the county it is on). This popup window will display the names of the features along with icons that represent the feature 'type'. In this example we can see there is a 'Charles Library' place ![](./images/overture_place.png) and building ![](./images/overture_building.png).
+
+![](./images/overture_panel.png)
+
+On the left side of the screen, an 'Inspector Panel' will show the properties of the selected feature, including: the type, sources, names and others depending on the feature type.
+
 ### In QGIS
+
+There are some ways to explore OpenStreetMap data in QGIS without downloading the data. The easiest way to do this is using OSM raster tiles. Follow the steps below to see OSM data in QGIS.
+
+::: {.callout-important collapse="true"}
+## Install QGIS
+
+If you don't have QGIS installed, go to [https://qgis.org/download/](https://qgis.org/download/) and follow the instructions to download the latest version for you operating system. 
+:::
+
+<span class="badge rounded-pill bg-primary">01</span> *Open QGIS*
+
+![](./images/qgis_main.png)
+
+[02]{.badge .rounded-pill .bg-primary} *Add a raster tile connection*
+
+In the Browser panel, right-click on `XYZ Tiles`, then click on `New connection`.
+
+![](./images/qgis_new.png){width="30%"}
+
+[03]{.badge .rounded-pill .bg-primary} *Set the new XYZ connection*
+
+In the new window, type `OSM` as the name for your connection.
+Then copy and paste this line `https://tile.openstreetmap.org/{z}/{x}/{y}.png` in the URL space under 'Connection Details'.
+
+Then click `OK`.
+
+![](./images/qgis_new2.png){width="50%" height="auto"}
+
+[04]{.badge .rounded-pill .bg-primary} *Add the XYZ tiles to the map*
+
+Find the `OSM` XYZ raster tiles you created on previous step on the Browser panel and drag it to the Layers panel or directly to the map area.
+
+![](./images/qgis_osm.png)
+
+[05]{.badge .rounded-pill .bg-primary} *Zoom in to the desired area on the map*
+
+Using the zoom in tools located in the top of the screen on QGIS you can locate the area you want to see. The map will show more details based on the level of zoom you are in. Ypu can use this raster tiles as a basemap in your projects. 
+
+![](./images/qgis_map.png)
+
+::: {.callout-warning}
+## Warning!
+OSM tiles are served through the internet. The speed at which the map loads depends on your internet connection.
+:::
 
 ## Downloading the data
 
-
-
+[STEP 1]{.badge .rounded-pill .bg-primary} *Open QGIS*
 
 
 ## Attribution {.appendix .unnumbered}

@@ -24,78 +24,48 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5462d0dc975739fea4b7814f85fabdb2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+<script src="opengeodata_files/libs/clipboard/clipboard.min.js"></script>
+<script src="opengeodata_files/libs/quarto-html/quarto.js"></script>
+<script src="opengeodata_files/libs/quarto-html/popper.min.js"></script>
+<script src="opengeodata_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="opengeodata_files/libs/quarto-html/anchor.min.js"></script>
+<link href="opengeodata_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="opengeodata_files/libs/quarto-html/quarto-syntax-highlighting-2486e1f0a3ee9ee1fc393803a1361cdb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="opengeodata_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="opengeodata_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="opengeodata_files/libs/bootstrap/bootstrap-677b520d69fcc55ab41b4b425631e74d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
 
 <body>
 
-<div id="quarto-search-results"></div>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Contents</h2>
    
   <ul>
   <li><a href="#why-open-geospatial-data" id="toc-why-open-geospatial-data" class="nav-link active" data-scroll-target="#why-open-geospatial-data"><span class="header-section-number">1</span> Why Open Geospatial Data?</a></li>
   <li><a href="#sources-reviewed-in-this-tutorial" id="toc-sources-reviewed-in-this-tutorial" class="nav-link" data-scroll-target="#sources-reviewed-in-this-tutorial"><span class="header-section-number">2</span> Sources reviewed in this tutorial</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#openstreetmap-osm" id="toc-openstreetmap-osm" class="nav-link" data-scroll-target="#openstreetmap-osm"><span class="header-section-number">2.1</span> OpenStreetMap OSM</a></li>
   <li><a href="#overture-maps" id="toc-overture-maps" class="nav-link" data-scroll-target="#overture-maps"><span class="header-section-number">2.2</span> Overture Maps</a></li>
   </ul></li>
   <li><a href="#exploring-the-data" id="toc-exploring-the-data" class="nav-link" data-scroll-target="#exploring-the-data"><span class="header-section-number">3</span> Exploring the data</a>
+  <ul>
+  <li><a href="#in-openstreetmap" id="toc-in-openstreetmap" class="nav-link" data-scroll-target="#in-openstreetmap"><span class="header-section-number">3.1</span> In OpenStreetMap</a>
   <ul class="collapse">
-  <li><a href="#in-openstreetmap" id="toc-in-openstreetmap" class="nav-link" data-scroll-target="#in-openstreetmap"><span class="header-section-number">3.1</span> In OpenStreetMap</a></li>
+  <li><a href="#querying-the-data" id="toc-querying-the-data" class="nav-link" data-scroll-target="#querying-the-data"><span class="header-section-number">3.1.1</span> Querying the data</a></li>
   </ul></li>
+  <li><a href="#in-overture-maps" id="toc-in-overture-maps" class="nav-link" data-scroll-target="#in-overture-maps"><span class="header-section-number">3.2</span> In Overture Maps</a></li>
+  <li><a href="#in-qgis" id="toc-in-qgis" class="nav-link" data-scroll-target="#in-qgis"><span class="header-section-number">3.3</span> In QGIS</a></li>
+  </ul></li>
+  <li><a href="#downloading-the-data" id="toc-downloading-the-data" class="nav-link" data-scroll-target="#downloading-the-data"><span class="header-section-number">4</span> Downloading the data</a></li>
+  
   </ul>
 </nav>
-    </div>
-<!-- main -->
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -174,14 +144,24 @@ ul.task-list li input[type="checkbox"] {
 <section id="exploring-the-data" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="exploring-the-data"><span class="header-section-number">3</span> Exploring the data</h2>
 <section id="in-openstreetmap" class="level3" data-number="3.1">
-<h3 data-number="3.1" class="anchored"><span class="header-section-number">3.1</span> In OpenStreetMap</h3>
+<h3 data-number="3.1" class="anchored" data-anchor-id="in-openstreetmap"><span class="header-section-number">3.1</span> In OpenStreetMap</h3>
 <p><span class="badge rounded-pill bg-primary">01</span> <em>Go to <a href="https://www.openstreetmap.org/">https://www.openstreetmap.org/</a> on your web browser</em></p>
 <p><img src="./images/osm_tools.png" class="img-fluid"></p>
 <p>The screen will show a big area with a map on the center. To explore the map you can use the <code>Search</code> bar located on the top left corner. Simply type the name of a place or a street address and click <code>enter/return</code> or the search icon. You can also use the <code>Navigation controls</code> (zoom in +/zoom out -/show my location) located on the top right corner of the map.</p>
 <p><span class="badge rounded-pill bg-primary">02</span> <em>Type the name of a place in the search bar.</em></p>
 <p>When you type the name of a place in the <code>Search</code> bar, OSM will show you a list of options found in <code>Nominatim</code>.</p>
-<div class="alert alert-dismissible alert-primary">
-<p><strong></strong> <a href="https://nominatim.org/" class="alert-link">Nominatim</a> is an open-source geocoding software used to find addresses and places in OSM.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://nominatim.org/"><strong>Nominatim</strong></a> is an open-source geocoding software used to find addresses and places in OSM.</p>
+</div>
 </div>
 <p>Here we typed <code>Philadelphia</code> and we get six main results: the city of Philadelphia, Pennsylvania, the county with the same name, a town named Philadelphia in Mississippi and three other villages named like that in other states. Notice the map has zoomed in to the city of Philadelphia, PA. The results you get are based on the current view of your map. If you want to see more results you can click on the button <code>More results</code>.</p>
 <p><img src="./images/search_osm.png" class="img-fluid"></p>
@@ -189,14 +169,25 @@ ul.task-list li input[type="checkbox"] {
 <p>When you click on a result, the left panel will show the selected element info and tags. On the map, you would see the element highlighted in orange.</p>
 <p><img src="./images/element1.png" class="img-fluid"></p>
 <p>In this example we see an area highlighted in orange that corresponds to the city of Philadelphia along with a node in the center of this area. On the left side panel we see a list with all the tags assigned to this element. For example: <code>border_type:city</code>, <code>boundary:administrative</code>, and <code>loc_name:Philly</code>.</p>
-<div class="alert alert-dismissible alert-primary">
-<strong>How data is organized in OSM?</strong><br><br>
-<p>
-All data in OSM is represented by an <strong>element</strong>.<br><br>An <strong>element</strong> can be either a <strong>node</strong> (point)<img src="https://wiki.openstreetmap.org/w/images/7/76/Osm_element_node.svg" style="width: 3%; height: auto;">, a <strong>way</strong> (line) <img src="https://wiki.openstreetmap.org/w/images/e/ee/Osm_element_way.svg" style="width: 3%; height: auto;">or a <strong>relation</strong> (group of elements)<img src="https://wiki.openstreetmap.org/w/images/4/48/Osm_element_relation.svg" style="width: 3%; height: auto;">.<br><br>Each element is described using <strong>tags</strong> which are the combination of a <strong>key</strong> and a <strong>value</strong> <img src="https://wiki.openstreetmap.org/w/images/0/0d/Mf_tag.svg" style="width: 30px; height: 30px; background-color: white; padding: 0px;">. For example a coffee shop os represented by an element of type <strong>node</strong> with tags <strong>‘amenity’=‘cafe’</strong>
-</p>
-<p>
-Learn more about elements and tags <a href="https://wiki.openstreetmap.org/wiki/Elements">here</a>.
-</p></div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How data is organized in OSM?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>All data in OSM is represented by an <strong>element.</strong></p>
+<p>An <strong>element</strong> can be either a <code>node</code> <img src="https://wiki.openstreetmap.org/w/images/7/76/Osm_element_node.svg" style="width:3.0%">, a <code>way</code> <img src="https://wiki.openstreetmap.org/w/images/e/ee/Osm_element_way.svg" style="width:3.0%"> or a <code>relation</code> <img src="https://wiki.openstreetmap.org/w/images/4/48/Osm_element_relation.svg" style="width:3.0%">.</p>
+<p>Each element is described using <code>tags</code> which are the combination of a <code>key</code> and a <code>value</code> <img src="https://wiki.openstreetmap.org/w/images/0/0d/Mf_tag.svg" style="background-color: white; padding: 0px" width="30" height="30">. For example, a coffee shop is represented by an element type <code>node</code> with tags <code>amenity=cafe</code>.</p>
+<p>Learn more about elements and tags <a href="https://wiki.openstreetmap.org/wiki/Elements">here.</a></p>
+</div>
+</div>
+</div>
 <section id="querying-the-data" class="level4" data-number="3.1.1">
 <h4 data-number="3.1.1" class="anchored" data-anchor-id="querying-the-data"><span class="header-section-number">3.1.1</span> Querying the data</h4>
 <p>Now lets query the data we see on the map to discover the type of element and what tags are being used to describe it.</p>
@@ -213,38 +204,116 @@ Learn more about elements and tags <a href="https://wiki.openstreetmap.org/wiki/
 <p>If you click on any of the results, the left side panel will show the element details and tags. In this example, we clicked on ‘Saxbys’, which is a coffee shop by Charles Library.</p>
 <p>As you can see, this element has five tags that describe it including its name, opening hours, and wheelchair accessibility. An element can have unlimited number of tags, however, some of them might be auto-exclusive. See more details on OSM tagging system here.</p>
 <p><img src="./images/queryosm2.png" class="img-fluid"></p>
-<div class="alert alert-dismissible alert-warning">
-<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-<h4 class="alert-heading anchored">
-Warning!
-</h4>
-<p class="mb-0">
-To add or modify tags and elements on the map you need to sign up for an OSM account <a href="https://www.openstreetmap.org/user/new" class="alert-link">here</a>.
-</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Warning!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To add or modify tags and elements on the map you need to sign up for an OSM account <a href="https://www.openstreetmap.org/user/new">here.</a></p>
+</div>
+</div>
+</section>
 </section>
 <section id="in-overture-maps" class="level3" data-number="3.2">
 <h3 data-number="3.2" class="anchored" data-anchor-id="in-overture-maps"><span class="header-section-number">3.2</span> In Overture Maps</h3>
+<p><span class="badge rounded-pill bg-primary">01</span> <em>Go to <a href="https://explore.overturemaps.org/#15/38.90678/-77.03649">https://explore.overturemaps.org/</a> on your web browser</em></p>
+<p><img src="./images/overture_tools.png" class="img-fluid"></p>
+<p><span class="badge rounded-pill bg-primary">02</span> <em>Find your location on the map</em></p>
+<p>Unlike OSM, the Overture Maps explorer does not have a search bar. The best way to find a location is either clicking on the ‘Find my location’ button <img src="./images/overture_loc.png" class="img-fluid"> or using the navigation controls (zoom in and zoom out).</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Allow access to your location
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The first time you use the ‘Find my location’ tool, you will be asked to allow the browser access. If you are ok with this, simply click on ‘Allow this time’.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./images/overture_allow.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<p><img src="./images/overture_charles.png" class="img-fluid"></p>
+<p><span class="badge rounded-pill bg-primary">03</span> <em>Click on any of the features you see on the map</em></p>
+<p>When you click on any feature on the map, a popup window will display the feature(s) you clicked on, the bounding features (those that contain the clicked feature, like the city, the county it is on). This popup window will display the names of the features along with icons that represent the feature ‘type’. In this example we can see there is a ‘Charles Library’ place <img src="./images/overture_place.png" class="img-fluid"> and building <img src="./images/overture_building.png" class="img-fluid">.</p>
+<p><img src="./images/overture_panel.png" class="img-fluid"></p>
+<p>On the left side of the screen, an ‘Inspector Panel’ will show the properties of the selected feature, including: the type, sources, names and others depending on the feature type.</p>
 </section>
 <section id="in-qgis" class="level3" data-number="3.3">
 <h3 data-number="3.3" class="anchored" data-anchor-id="in-qgis"><span class="header-section-number">3.3</span> In QGIS</h3>
+<p>There are some ways to explore OpenStreetMap data in QGIS without downloading the data. The easiest way to do this is using OSM raster tiles. Follow the steps below to see OSM data in QGIS.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Install QGIS
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you don’t have QGIS installed, go to <a href="https://qgis.org/download/">https://qgis.org/download/</a> and follow the instructions to download the latest version for you operating system.</p>
+</div>
+</div>
+</div>
+<p><span class="badge rounded-pill bg-primary">01</span> <em>Open QGIS</em></p>
+<p><img src="./images/qgis_main.png" class="img-fluid"></p>
+<p><span class="badge rounded-pill bg-primary">02</span> <em>Add a raster tile connection</em></p>
+<p>In the Browser panel, right-click on <code>XYZ Tiles</code>, then click on <code>New connection</code>.</p>
+<p><img src="./images/qgis_new.png" class="img-fluid" style="width:30.0%"></p>
+<p><span class="badge rounded-pill bg-primary">03</span> <em>Set the new XYZ connection</em></p>
+<p>In the new window, type <code>OSM</code> as the name for your connection. Then copy and paste this line <code>https://tile.openstreetmap.org/{z}/{x}/{y}.png</code> in the URL space under ‘Connection Details’.</p>
+<p>Then click <code>OK</code>.</p>
+<p><img src="./images/qgis_new2.png" style="width:50.0%"></p>
+<p><span class="badge rounded-pill bg-primary">04</span> <em>Add the XYZ tiles to the map</em></p>
+<p>Find the <code>OSM</code> XYZ raster tiles you created on previous step on the Browser panel and drag it to the Layers panel or directly to the map area.</p>
+<p><img src="./images/qgis_osm.png" class="img-fluid"></p>
+<p><span class="badge rounded-pill bg-primary">05</span> <em>Zoom in to the desired area on the map</em></p>
+<p>Using the zoom in tools located in the top of the screen on QGIS you can locate the area you want to see. The map will show more details based on the level of zoom you are in. Ypu can use this raster tiles as a basemap in your projects.</p>
+<p><img src="./images/qgis_map.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>OSM tiles are served through the internet. The speed at which the map loads depends on your internet connection.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="downloading-the-data" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="downloading-the-data"><span class="header-section-number">4</span> Downloading the data</h2>
+<p><span class="badge rounded-pill bg-primary">STEP 1</span> <em>Open QGIS</em></p>
 </section>
 
-</section></section><div id="quarto-appendix" class="default"><section id="attribution" class="level2 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Attribution</h2><div class="quarto-appendix-contents">
+
+<div id="quarto-appendix" class="default"><section id="attribution" class="level2 appendix unnumbered"><h2 class="anchored quarto-appendix-heading">Attribution</h2><div class="quarto-appendix-contents">
 
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
 <a property="dct:title" rel="cc:attributionURL" href="http://felipevaldez.com/kobotoolbox_tutorial/">Open Geospatial Data</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://felipevaldez.com/">Felipe Valdez</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a>
 </p>
-
-
-</div></section></div></main></div>
-
-
-
- <!-- /main -->
+</div></section></div></main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -665,7 +734,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
- <!-- /content -->
+</div> <!-- /content -->
 
 
 
