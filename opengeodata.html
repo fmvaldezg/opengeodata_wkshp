@@ -61,7 +61,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#in-overture-maps" id="toc-in-overture-maps" class="nav-link" data-scroll-target="#in-overture-maps"><span class="header-section-number">3.2</span> In Overture Maps</a></li>
   <li><a href="#in-qgis" id="toc-in-qgis" class="nav-link" data-scroll-target="#in-qgis"><span class="header-section-number">3.3</span> In QGIS</a></li>
   </ul></li>
-  <li><a href="#downloading-the-data" id="toc-downloading-the-data" class="nav-link" data-scroll-target="#downloading-the-data"><span class="header-section-number">4</span> Downloading the data</a></li>
+  <li><a href="#downloading-the-data" id="toc-downloading-the-data" class="nav-link" data-scroll-target="#downloading-the-data"><span class="header-section-number">4</span> Downloading the data</a>
+  <ul>
+  <li><a href="#from-osm-to-qgis" id="toc-from-osm-to-qgis" class="nav-link" data-scroll-target="#from-osm-to-qgis"><span class="header-section-number">4.1</span> From OSM to QGIS</a></li>
+  <li><a href="#from-overture-maps" id="toc-from-overture-maps" class="nav-link" data-scroll-target="#from-overture-maps"><span class="header-section-number">4.2</span> From Overture Maps</a></li>
+  </ul></li>
   
   </ul>
 </nav>
@@ -303,7 +307,79 @@ Warning!
 </section>
 <section id="downloading-the-data" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="downloading-the-data"><span class="header-section-number">4</span> Downloading the data</h2>
-<p><span class="badge rounded-pill bg-primary">STEP 1</span> <em>Open QGIS</em></p>
+<p>There are multiple ways to download data from OSM and Overture Maps. In this tutorial we focus on how to download data directly to QGIS.</p>
+<section id="from-osm-to-qgis" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="from-osm-to-qgis"><span class="header-section-number">4.1</span> From OSM to QGIS</h3>
+<p><span class="badge rounded-pill bg-primary">01</span> <em>Install QuickOSM plugin</em></p>
+<p>Open QGIS.</p>
+<p>On the top menu bar click on ‘Plugins’ and then on ‘Manage and Install Plugins’.</p>
+<p><img src="./images/qgis_mn.png" class="img-fluid"></p>
+<p>On the new window, in the search bar type <code>quickosm</code>, then click on ‘Install plugin’. Once installed, close the plugins manager window.</p>
+<p><img src="./images/qgis_inst.png" class="img-fluid"></p>
+<p><span class="badge rounded-pill bg-primary">02</span> <em>Build a query to download data</em></p>
+<p>‘QuickOSM’ plugin uses <a href="https://wiki.openstreetmap.org/wiki/Overpass_API"><em>overpass API</em></a>, which is is a read-only interface that allows users to query and extract specific data from the OpenStreetMap (OSM) database using a custom query language.</p>
+<p>To build a custom query:</p>
+<ul>
+<li>Click on the ‘QuickOSM’ button on the toolbar <img src="./images/quickosm.png" class="img-fluid" style="width:4.0%" data-hight="auto"></li>
+<li>On the new window:</li>
+</ul>
+<ol type="1">
+<li>Add <code>amenity</code> on the key space and <code>parking</code> on the value space.</li>
+<li>Add <code>Philadelphia, PA</code> on the ‘in’ space.</li>
+<li>Click on ‘Run query’.</li>
+</ol>
+<p><img src="./images/quick_query.png" class="img-fluid"></p>
+<p>This will generate a query to retrieve all elements tagged as ‘amenity’=‘parking’ in the city of Philadelphia.</p>
+<p>After the download is done, close the ‘QuickOSM’ window and go back to the map.</p>
+<p><img src="./images/qgis_res1.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://osm-queries.ldodds.com/tutorial/index.html"><strong>Learn more</strong></a> on how overpass queries work in this tutorial.</p>
+</div>
+</div>
+<p><span class="badge rounded-pill bg-primary">03</span> <em>Save and style the layers</em></p>
+<p>The data downloaded is stored as a temporary file in your system.</p>
+<p><img src="./images/save1.png" class="img-fluid"></p>
+<p>If you want to use it further from this session in QGIS you first need to save the files in your system.</p>
+<p>To do so:</p>
+<ol type="1">
+<li>Right click on the name of the layer you want to save.</li>
+<li>Click on the option ‘Make permanent’ or ‘Export’ and then ‘Save feature as…’.</li>
+<li>In the new window, select the format for your file, a name and, a location.</li>
+<li>Then click ‘OK’.</li>
+</ol>
+<p><img src="./images/save2.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Go further
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>There are other options to download data usin ‘QuickOSM’ plugin.</p>
+<p>You can try <em>preset</em> downloads, play around with different combinations of <code>key</code> and <code>value</code>, or download all data for a specific area. To download all data for a specific area, take into account that the amount of data can exceed your system capacity. Start downloading smaller areas to test.</p>
+<p>For example, zoom in to a neighborhood or block, then in the ‘QuickOSM’ plugin window use ‘Canvas Extent’ then execute the query.</p>
+<p><img src="./images/canvas.png" class="img-fluid" style="width:20.0%"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="from-overture-maps" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="from-overture-maps"><span class="header-section-number">4.2</span> From Overture Maps</h3>
+</section>
 </section>
 
 

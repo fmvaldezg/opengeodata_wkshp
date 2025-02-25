@@ -242,8 +242,80 @@ OSM tiles are served through the internet. The speed at which the map loads depe
 
 ## Downloading the data
 
-[STEP 1]{.badge .rounded-pill .bg-primary} *Open QGIS*
+There are multiple ways to download data from OSM and Overture Maps. In this tutorial we focus on how to download data directly to QGIS.
 
+### From OSM to QGIS
+
+[01]{.badge .rounded-pill .bg-primary} *Install QuickOSM plugin*
+
+Open QGIS. 
+
+On the top menu bar click on 'Plugins' and then on 'Manage and Install Plugins'.
+
+![](./images/qgis_mn.png)
+
+On the new window, in the search bar type `quickosm`, then click on 'Install plugin'.
+Once installed, close the plugins manager window.
+
+![](./images/qgis_inst.png)
+
+[02]{.badge .rounded-pill .bg-primary} *Build a query to download data*
+
+'QuickOSM' plugin uses [*overpass API*](https://wiki.openstreetmap.org/wiki/Overpass_API), which is is a read-only interface that allows users to query and extract specific data from the OpenStreetMap (OSM) database using a custom query language.
+
+To build a custom query:
+
+- Click on the 'QuickOSM' button on the toolbar ![](./images/quickosm.png){width="4%" hight="auto"}
+- On the new window:
+1. Add `amenity` on the key space and `parking` on the value space.
+2. Add `Philadelphia, PA` on the 'in' space.
+3. Click on 'Run query'.
+
+![](./images/quick_query.png)
+
+This will generate a query to retrieve all elements tagged as 'amenity'='parking' in the city of Philadelphia.
+
+After the download is done, close the 'QuickOSM' window and go back to the map.
+
+![](./images/qgis_res1.png)
+
+::: {.callout-note}
+[**Learn more**](https://osm-queries.ldodds.com/tutorial/index.html) on how overpass queries work in this tutorial.
+:::
+
+
+[03]{.badge .rounded-pill .bg-primary} *Save and style the layers*
+
+The data downloaded is stored as a temporary file in your system. 
+
+![](./images/save1.png)
+
+If you want to use it further from this session in QGIS you first need to save the files in your system.
+
+To do so:
+
+1. Right click on the name of the layer you want to save.
+2. Click on the option 'Make permanent' or 'Export' and then 'Save feature as...'.
+3. In the new window, select the format for your file, a name and, a location.
+4. Then click 'OK'.
+
+![](./images/save2.png)
+
+::: {.callout-caution collapse="true"}
+## Go further
+
+There are other options to download data usin 'QuickOSM' plugin.
+
+You can try *preset* downloads, play around with different combinations of `key` and `value`, or download all data for a specific area. 
+To download all data for a specific area, take into account that the amount of data can exceed your system capacity. Start downloading smaller areas to test.
+
+For example, zoom in to a neighborhood or block, then in the 'QuickOSM' plugin window use 'Canvas Extent' then execute the query.
+
+![](./images/canvas.png){width="20%"}
+
+:::
+
+### From Overture Maps
 
 ## Attribution {.appendix .unnumbered}
 
