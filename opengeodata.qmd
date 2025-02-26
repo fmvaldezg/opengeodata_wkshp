@@ -7,9 +7,8 @@ toc: true
 toc-title: Contents
 toc-depth: 4
 number-sections: true
-format:
+format: 
   html: default
-  #pdf: default
 ---
 
 ## Why Open Geospatial Data?
@@ -255,7 +254,7 @@ On the top menu bar click on 'Plugins' and then on 'Manage and Install Plugins'.
 ![](./images/qgis_mn.png)
 
 On the new window, in the search bar type `quickosm`, then click on 'Install plugin'.
-Once installed, close the plugins manager window.
+Once installed, close the plugins manager window. Learn more about [QuickOSM plugin](https://plugins.qgis.org/plugins/QuickOSM/)
 
 ![](./images/qgis_inst.png)
 
@@ -316,6 +315,110 @@ For example, zoom in to a neighborhood or block, then in the 'QuickOSM' plugin w
 :::
 
 ### From Overture Maps
+
+To download data from Overture Maps directly to QGIS we are going to use two plugins: 
+
+[QduckDB](https://plugins.qgis.org/plugins/qduckdb/) and [GeoParquet Downloader](https://plugins.qgis.org/plugins/qgis_plugin_gpq_downloader/).
+
+Follow the steps forward to download data directly to QGIS.
+
+[01]{.badge .rounded-pill .bg-primary} *Install DuckDB plugin*
+
+Open QGIS. 
+
+On the top menu bar click on 'Plugins' and then on 'Manage and Install Plugins'.
+
+![](./images/qgis_mn.png)
+
+On the new window, in the search bar type `qduckdb`, then click on 'Install plugin'.
+Once installed, close the plugins manager window.
+
+![](./images/qgis_inst1.png)
+Go back to the Plugins amanger and check that the 'QduckDB' plugin is activated (with a check mark).
+
+![](./images/qgis_check.png)
+If not, check the box.
+
+If you get an error message, follow the instructions in the following warining box.
+
+::: {.callout-warning collapse="true"}
+## Warning!
+Depending on the oprating system you are using, the QduckDB plugin will need some extra steps to function correctly. 
+
+On MacOS: 
+
+1. Open the terminal app ![](https://upload.wikimedia.org/wikipedia/commons/b/b3/Terminalicon2.png){width="6%" height="auto"}
+2. Type the following:
+```bash
+/Applications/QGIS.app/Contents/MacOS/bin/python3.9 -m pip install "duckdb==1.2.0"
+```
+3. In terminal, locate and open the plugin file by typing:
+```bash
+open ~/Library/'Application Support'/QGIS/QGIS3/profiles/default/python/plugins/qduckdb/gui/
+```
+4. Open the file `dlg_add_duckdb_layer.py` on a text editor app.
+![](./images/qgis_open.png)
+5. Add the followin to line 3:
+```python
+import typing
+```
+6. Replace the text on line 89 with:
+```python
+def db_path(self) -> typing.Union[Path, None]:
+```
+7. Save the file.
+8. Reopen QGIS.
+9. Activate QduckDB plugin.
+
+[Here you can find instructions for other OS.](https://oslandia.gitlab.io/qgis/qduckdb/usage/installation.html)
+:::
+
+[02]{.badge .rounded-pill .bg-primary} *Install GeoParquet Downloader plugin*
+
+On the top menu bar click on 'Plugins' and then on 'Manage and Install Plugins'.
+
+![](./images/qgis_mn.png)
+
+On the new window, in the search bar type `geoparquet downloader`, then click on 'Install plugin'.
+Once installed, close the plugins manager window.
+
+![](./images/qgis_inst2.png)
+
+You should see the following icons on your tool bar ![](./images/new_icons.png){width="10%" height="auto"}
+
+If not, right click on any empty space on the tool bar and activate the 'Plugins toolbar'.
+![](./images/toolbar.png){width="20%"}
+
+[03]{.badge .rounded-pill .bg-primary} *Select the data source and type to download*
+
+:::{.callout-note}
+[GeoParquet](https://geoparquet.org/) is a geospatial extension of 'Apache Parquet' format that efficiently stores geographic data in a columnar structure. It provides optimized compression, native support for geometries (points, lines, polygons), and includes spatial metadata like coordinate reference systems.
+:::
+
+- Click on the 'Download GeoParquet Data' button on the toolbar ![](./images/geop_but.png){width="4%"}
+- In the new window, select the source 'Overture Maps' and the types you want to download.
+![](./images/geop_source.png){width="50%"}
+- Set a directory and name where you want to save the file.
+
+::: {.callout-warning}
+## Warning!
+The 'GeoParquet Downloader' will download data for the current map extent. Be sure to limite the view to a local area to avoid saturating the download process.
+:::
+
+Once the download is complete you should see a message like this:
+![](./images/geop_mess.png){width="70%"}
+
+[04]{.badge .rounded-pill .bg-primary} *Open the downloaded data*
+
+- Click on the 'Open Parquet with DuckDB' button on the toolbar ![](./images/duck_open.png){width="4%"}
+- Point to the file you downloaded in the previous step and set EPSG:4326 as the CRS.
+- Click 'Open'
+
+![](./images/duckdb_set.png){width="70%"}
+
+The resulting map shows all places around Temple University downloaded from Overture Maps
+
+![](./images/final.png)
 
 ## Attribution {.appendix .unnumbered}
 
