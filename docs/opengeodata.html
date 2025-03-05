@@ -1,15 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RC52W8J799"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RC52W8J799');
-</script>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.32">
@@ -69,6 +59,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -84,11 +75,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-4fde8c6f9af29001b0cd9186783c371a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -114,11 +105,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body>
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./opengeodata.pdf"> 
+<span class="menu-text">Download PDF</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -128,27 +139,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#why-open-geospatial-data" id="toc-why-open-geospatial-data" class="nav-link active" data-scroll-target="#why-open-geospatial-data"><span class="header-section-number">1</span> Why Open Geospatial Data?</a></li>
   <li><a href="#sources-reviewed-in-this-tutorial" id="toc-sources-reviewed-in-this-tutorial" class="nav-link" data-scroll-target="#sources-reviewed-in-this-tutorial"><span class="header-section-number">2</span> Sources reviewed in this tutorial</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#openstreetmap-osm" id="toc-openstreetmap-osm" class="nav-link" data-scroll-target="#openstreetmap-osm"><span class="header-section-number">2.1</span> OpenStreetMap OSM</a></li>
   <li><a href="#overture-maps" id="toc-overture-maps" class="nav-link" data-scroll-target="#overture-maps"><span class="header-section-number">2.2</span> Overture Maps</a></li>
   </ul></li>
   <li><a href="#exploring-the-data" id="toc-exploring-the-data" class="nav-link" data-scroll-target="#exploring-the-data"><span class="header-section-number">3</span> Exploring the data</a>
-  <ul>
-  <li><a href="#in-openstreetmap" id="toc-in-openstreetmap" class="nav-link" data-scroll-target="#in-openstreetmap"><span class="header-section-number">3.1</span> In OpenStreetMap</a>
   <ul class="collapse">
-  <li><a href="#querying-the-data" id="toc-querying-the-data" class="nav-link" data-scroll-target="#querying-the-data"><span class="header-section-number">3.1.1</span> Querying the data</a></li>
-  </ul></li>
+  <li><a href="#in-openstreetmap" id="toc-in-openstreetmap" class="nav-link" data-scroll-target="#in-openstreetmap"><span class="header-section-number">3.1</span> In OpenStreetMap</a></li>
   <li><a href="#in-overture-maps" id="toc-in-overture-maps" class="nav-link" data-scroll-target="#in-overture-maps"><span class="header-section-number">3.2</span> In Overture Maps</a></li>
   <li><a href="#in-qgis" id="toc-in-qgis" class="nav-link" data-scroll-target="#in-qgis"><span class="header-section-number">3.3</span> In QGIS</a></li>
   </ul></li>
   <li><a href="#downloading-the-data" id="toc-downloading-the-data" class="nav-link" data-scroll-target="#downloading-the-data"><span class="header-section-number">4</span> Downloading the data</a>
-  <ul>
+  <ul class="collapse">
   <li><a href="#from-osm-to-qgis" id="toc-from-osm-to-qgis" class="nav-link" data-scroll-target="#from-osm-to-qgis"><span class="header-section-number">4.1</span> From OSM to QGIS</a></li>
   <li><a href="#from-overture-maps" id="toc-from-overture-maps" class="nav-link" data-scroll-target="#from-overture-maps"><span class="header-section-number">4.2</span> From Overture Maps</a></li>
   </ul></li>
   
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="opengeodata.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="opengeodata.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -267,8 +275,8 @@ How data is organized in OSM?
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>All data in OSM is represented by an <strong>element.</strong></p>
-<p>An <strong>element</strong> can be either a <code>node</code> <img src="https://wiki.openstreetmap.org/w/images/7/76/Osm_element_node.svg" style="width:3.0%">, a <code>way</code> <img src="https://wiki.openstreetmap.org/w/images/e/ee/Osm_element_way.svg" style="width:3.0%"> or a <code>relation</code> <img src="https://wiki.openstreetmap.org/w/images/4/48/Osm_element_relation.svg" style="width:3.0%">.</p>
-<p>Each element is described using <code>tags</code> which are the combination of a <code>key</code> and a <code>value</code> <img src="https://wiki.openstreetmap.org/w/images/0/0d/Mf_tag.svg" style="background-color: white; padding: 0px" width="30" height="30">. For example, a coffee shop is represented by an element type <code>node</code> with tags <code>amenity=cafe</code>.</p>
+<p>An <strong>element</strong> can be either a <code>node</code> <img src="./images/Osm_element_node.png" style="width:3.0%">, a <code>way</code> <img src="./images/Osm_element_way.png" style="width:3.0%"> or a <code>relation</code> <img src="./images/Osm_element_relation.png" style="width:3.0%">.</p>
+<p>Each element is described using <code>tags</code> which are the combination of a <code>key</code> and a <code>value</code> <img src="./images/Mf_tag.png" style="background-color: white; padding: 0px" width="30" height="30">. For example, a coffee shop is represented by an element type <code>node</code> with tags <code>amenity=cafe</code>.</p>
 <p>Learn more about elements and tags <a href="https://wiki.openstreetmap.org/wiki/Elements">here.</a></p>
 </div>
 </div>
@@ -486,7 +494,7 @@ Warning!
 <p>Depending on the oprating system you are using, the QduckDB plugin will need some extra steps to function correctly.</p>
 <p>On MacOS:</p>
 <ol type="1">
-<li>Open the terminal app <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Terminalicon2.png" style="width:6.0%"></li>
+<li>Open the terminal app <img src="./images/Terminalicon2.png" style="width:6.0%"></li>
 <li>Type the following:</li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">/Applications/QGIS.app/Contents/MacOS/bin/python3.9</span> <span class="at">-m</span> pip install <span class="st">"duckdb==1.2.0"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

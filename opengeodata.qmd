@@ -5,11 +5,15 @@ author:
   url: mailto:felipe.valdez@temple.edu
 toc: true
 toc-title: Contents
-toc-depth: 4
+toc-depth: 3
 number-sections: true
 format: 
   html: default
-  ##pdf: default
+  pdf: default
+format-links: 
+  - format: pdf
+    text: PDF
+    icon: file-pdf
 ---
 
 ## Why Open Geospatial Data?
@@ -120,9 +124,9 @@ On the left side panel we see a list with all the tags assigned to this element.
 ## How data is organized in OSM?
 All data in OSM is represented by an **element.**
 
-An **element** can be either a `node` ![](https://wiki.openstreetmap.org/w/images/7/76/Osm_element_node.svg){width="3%" height="auto"}, a `way` ![](https://wiki.openstreetmap.org/w/images/e/ee/Osm_element_way.svg){width="3%" height="auto"} or a `relation` ![](https://wiki.openstreetmap.org/w/images/4/48/Osm_element_relation.svg){width="3%" height="auto"}.
+An **element** can be either a `node` ![](./images/Osm_element_node.png){width="3%" height="auto"}, a `way` ![](./images/Osm_element_way.png){width="3%" height="auto"} or a `relation` ![](./images/Osm_element_relation.png){width="3%" height="auto"}.
 
-Each element is described using `tags` which are the combination of a `key` and a `value` ![](https://wiki.openstreetmap.org/w/images/0/0d/Mf_tag.svg){width="30px" height="30px" style="background-color: white; padding: 0px"}.
+Each element is described using `tags` which are the combination of a `key` and a `value` ![](./images/Mf_tag.png){width="30px" height="30px" style="background-color: white; padding: 0px"}.
 For example, a coffee shop is represented by an element type `node` with tags `amenity=cafe`.
 
 Learn more about elements and tags [here.](https://wiki.openstreetmap.org/wiki/Elements)
@@ -348,7 +352,7 @@ Depending on the oprating system you are using, the QduckDB plugin will need som
 
 On MacOS: 
 
-1. Open the terminal app ![](https://upload.wikimedia.org/wikipedia/commons/b/b3/Terminalicon2.png){width="6%" height="auto"}
+1. Open the terminal app ![](./images/Terminalicon2.png){width="6%" height="auto"}
 2. Type the following:
 ```bash
 /Applications/QGIS.app/Contents/MacOS/bin/python3.9 -m pip install "duckdb==1.2.0"
