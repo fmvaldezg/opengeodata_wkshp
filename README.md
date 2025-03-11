@@ -11,3 +11,4 @@ The tutorial walks through practical steps for:
 
 The guide includes detailed instructions with screenshots for each step, troubleshooting tips for different operating systems, and explanations of technical concepts like GeoParquet format.
 
+![](https://github.com/fmvaldezg/opengeodata_wkshp/blob/main/images/qgis_res1.png)
